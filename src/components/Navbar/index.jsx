@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <>
       <div className="p-4">
-        <div className="flex md:flex-row flex-col justify-between md:items-center gap-2 p-1">
+        <div className="flex md:flex-row flex-col justify-between md:items-center gap-2 p-1 mb-4">
           <Link className="flex items-center" href={"/"}>
             <Image
               src={"/images/catside.png"}

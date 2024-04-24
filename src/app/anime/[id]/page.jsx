@@ -139,11 +139,3 @@ const Page = async ({ params: { id } }) => {
 };
 
 export default Page;
-
-{
-  /* <Link href={anime.data.url}>
-          <p className="font-bold bg-color-primary rounded p-2 w-20 text-center mt-4 text-color-tertiary">
-            Watch
-          </p>
-        </Link> */
-}

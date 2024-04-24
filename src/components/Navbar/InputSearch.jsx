@@ -18,19 +18,17 @@ const InputSearch = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="flex p-1 border-black border rounded items-center">
       <input
-        className="p-1.5 rounded-xl bg-color-gray placeholder:text-color-primary w-full"
+        className="rounded outline-none placeholder:text-color-primary w-full"
         type="text"
         placeholder="Search..."
         ref={searchAnime}
         onKeyDown={handleSearch}
       />
-      <MagnifyingGlass
-        className="absolute top-1 right-2 cursor-pointer "
-        size={25}
-        onClick={handleSearch}
-      />
+      <button className="p-1">
+        <MagnifyingGlass size={20} onClick={handleSearch} />
+      </button>
     </div>
   );
 };
