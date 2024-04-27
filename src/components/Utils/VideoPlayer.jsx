@@ -1,29 +1,28 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
+// import { useEffect, useState } from "react";
 import YouTube from "react-youtube";
 
 const VideoPlayer = ({ youtubeId }) => {
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useMediaQuery({ maxWidth: 450 });
 
-  useEffect(() => {
-    // Check if the device width is less than or equal to 450px
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 450);
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsMobile(window.innerWidth <= 450);
+  //   };
 
-    handleResize(); // Initial check
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  //   handleResize();
+
+  //   window.addEventListener("resize", handleResize);
+
+  // }, []);
 
   const option = {
     height: isMobile ? "195" : "390",
     width: isMobile ? "320" : "640",
-    playerVars: {
-      autoplay: 1,
-    },
   };
 
   return (
@@ -42,7 +41,7 @@ const VideoPlayer = ({ youtubeId }) => {
           <Image
             src={"/images/videoplayer.png"}
             width={600}
-            height={600}
+            height={390}
             alt={"logo"}
           />
         </div>
